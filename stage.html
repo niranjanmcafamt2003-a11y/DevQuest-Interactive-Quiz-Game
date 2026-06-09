@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stage Levels</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="game-title">HTML Stage</h1>
+
+        <p class="subtitle">Select Your Level</p>
+
+        <div class="stage-container" id="levelsContainer">
+
+        </div>
+
+        <a href="index.html" class="btn leaderboard-btn">
+            Back
+        </a>
+
+    </div>
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+
+        const stage = params.get("stage");
+
+        const container = document.getElementById("levelsContainer");
+
+        const title = document.querySelector(".game-title");
+
+        if (stage == 1) {
+            title.innerText = "HTML Stage";
+        }
+
+        if (stage == 2) {
+            title.innerText = "CSS Stage";
+        }
+
+        if (stage == 3) {
+            title.innerText = "JavaScript Stage";
+        }
+
+
+        // CREATE LEVELS
+
+        for (let i = 1; i <= 10; i++) {
+
+            let level = document.createElement("a");
+
+            level.classList.add("stage-card");
+
+            level.href = `game.html?stage=${stage}&level=${i}`;
+
+            level.innerHTML = `
+<h3>Level ${i}</h3>
+<p>10 Questions</p>
+`;
+
+            container.appendChild(level);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

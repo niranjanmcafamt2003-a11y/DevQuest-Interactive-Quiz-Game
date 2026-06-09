@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DevQuest Certificate</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+background:#020617;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.certificate{
+
+background:white;
+
+width:800px;
+
+max-width:90%;
+
+padding:40px;
+
+border-radius:15px;
+
+text-align:center;
+
+color:black;
+
+box-shadow:0 0 40px rgba(0,0,0,0.6);
+
+}
+
+.cert-title{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+}
+
+.player-name{
+
+font-size:28px;
+
+color:#3b82f6;
+
+margin:15px 0;
+
+}
+
+.score{
+
+font-size:20px;
+
+margin-bottom:20px;
+
+}
+
+.trophy{
+
+width:80px;
+
+margin:20px 0;
+
+}
+
+.download-btn{
+
+display:inline-block;
+
+padding:12px 25px;
+
+background:#22c55e;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:8px;
+
+margin-top:20px;
+
+transition:0.3s;
+
+}
+
+.download-btn:hover{
+
+transform:scale(1.1);
+
+}
+
+.home-btn{
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:10px 20px;
+
+background:#3b82f6;
+
+color:white;
+
+border-radius:8px;
+
+text-decoration:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="certificate" id="certificate">
+
+<h1 class="cert-title">🎓 DevQuest Certificate</h1>
+
+<img src="images/trophy.png" class="trophy">
+
+<p>This certificate is awarded to</p>
+
+<h2 class="player-name" id="playerName">
+Player
+</h2>
+
+<p class="score">
+For successfully completing the DevQuest Quiz Game
+</p>
+
+<p>
+Score: <span id="playerScore"></span>
+</p>
+
+<a href="#" onclick="downloadCertificate()" class="download-btn">
+Download Certificate
+</a>
+
+<br>
+
+<a href="index.html" class="home-btn">
+Back to Home
+</a>
+
+</div>
+
+
+<script>
+
+const name = localStorage.getItem("playerName") || "Player";
+
+const score = localStorage.getItem("playerScore") || "0";
+
+document.getElementById("playerName").innerText = name;
+
+document.getElementById("playerScore").innerText = score;
+
+
+function downloadCertificate(){
+
+window.print();
+
+}
+
+</script>
+
+</body>
+
+</html>

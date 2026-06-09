@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevQuest Leaderboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        .leaderboard-container {
+
+            max-width: 700px;
+            margin: auto;
+
+            background: #0f172a;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+
+            text-align: center;
+
+        }
+
+        .leaderboard-title {
+
+            font-size: 40px;
+
+            color: #38bdf8;
+
+            margin-bottom: 20px;
+
+            text-shadow: 0 0 10px #38bdf8;
+
+        }
+
+        table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin-top: 20px;
+
+        }
+
+        th,
+        td {
+
+            padding: 12px;
+
+            border-bottom: 1px solid #334155;
+
+        }
+
+        th {
+
+            color: #22c55e;
+
+        }
+
+        .rank {
+
+            font-weight: bold;
+
+        }
+
+        .back-btn {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 12px 25px;
+
+            background: #3b82f6;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+
+        }
+
+        .back-btn:hover {
+
+            transform: scale(1.1);
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="leaderboard-container">
+
+        <h1 class="leaderboard-title">🏆 Leaderboard</h1>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Score</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="leaderboardTable">
+
+                <!-- scores will appear here -->
+
+            </tbody>
+
+        </table>
+
+        <a href="index.html" class="back-btn">Back to Menu</a>
+
+    </div>
+
+    <script src="js/leaderboard.js"></script>
+
+</body>
+
+</html>

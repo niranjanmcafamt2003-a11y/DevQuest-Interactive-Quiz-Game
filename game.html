@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevQuest Game</title>
+    <link rel="stylesheet" href="css/game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1 class="game-title">⚡ DevQuest</h1> <!-- TOP GAME BAR -->
+        <div class="game-top">
+            <div class="level"> Question: <span id="levelNumber">1</span> </div>
+            <div class="score"> Score: <span id="score">0</span> </div>
+        </div> <!-- TIMER -->
+        <div class="timer-box"> <svg class="timer-svg" width="120" height="120">
+                <circle cx="60" cy="60" r="50" stroke="#1e293b" stroke-width="10" fill="none" />
+                <circle id="timerProgress" cx="60" cy="60" r="50" stroke="#22c55e" stroke-width="10" fill="none"
+                    stroke-dasharray="314" stroke-dashoffset="0" />
+            </svg>
+            <div id="timerText">30</div>
+        </div> <!-- PROGRESS BAR -->
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div> <!-- QUESTION CARD -->
+        <div class="question-card">
+            <h2 id="questionText"> Question will appear here </h2>
+        </div> <!-- OPTIONS -->
+        <div id="options" class="options"> <button class="option-btn"></button> <button class="option-btn"></button>
+            <button class="option-btn"></button> <button class="option-btn"></button> </div> <!-- RESULT POPUP -->
+        <div id="resultPopup" class="hidden">
+            <h2 id="resultMessage"></h2> <button onclick="nextLevel()" class="next-btn"> Next Level </button>
+        </div> <!-- WIN SCREEN -->
+        <div id="winScreen" class="hidden">
+            <h1>🏆 Congratulations!</h1>
+            <p>You completed DevQuest!</p> <a href="certificate.html" class="cert-btn"> Claim Certificate </a>
+        </div>
+    </div>
+    <script src="js/sound.js"></script>
+    <script src="js/game.js"></script>
+</body>
+
+</html>
